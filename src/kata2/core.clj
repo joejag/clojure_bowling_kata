@@ -22,7 +22,7 @@
   ([s remainder]
    (if (zero? remainder)
      s
-     (let [number-nearest (nearest-numeral remainder)
-           arabic-numeral (first number-nearest)
-           roman-numeral (second number-nearest)]
+     (let [nearest (nearest-numeral remainder)
+           arabic-numeral (first nearest)
+           roman-numeral (second nearest)]
        (arabic->roman (str s roman-numeral) (- remainder arabic-numeral))))))
